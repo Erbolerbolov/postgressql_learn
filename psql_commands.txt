@@ -89,6 +89,22 @@ select distinct field from table offset 4;
 update table  set field = 'new_value' where id = 1;
 
 
+Create table
+
+pk id <----------- fk id_table_name
+
+inner join 
+rigth outer join 
+left outer join
+full outer join 
+
+select user.name, order.quantity from order inner join user on order.id_user = user.id;
+
+
+
+select u.name, o.quantity from order as o inner join user as u on o.id_user = u.id;
+
+select u.name, p.title, o,quantity from order_item as oi inner join products as p on oi.id_product=p.id inner join order as o on oi.order=o.id inner join user as u on o.id_users = u.id;
 
 
 
@@ -108,4 +124,7 @@ update table  set field = 'new_value' where id = 1;
 
 
 
+select plaintext from wordform  where plaintext ilike ('A%'); task 1
+
+select plaintext  from wordform limit 10 taks 2
 
