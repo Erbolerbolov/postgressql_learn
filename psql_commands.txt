@@ -98,13 +98,7 @@ rigth outer join
 left outer join
 full outer join 
 
-select user.name, order.quantity from order inner join user on order.id_user = user.id;
 
-
-
-select u.name, o.quantity from order as o inner join user as u on o.id_user = u.id;
-
-select u.name, p.title, o,quantity from order_item as oi inner join products as p on oi.id_product=p.id inner join order as o on oi.order=o.id inner join user as u on o.id_users = u.id;
 
 
 
@@ -128,3 +122,36 @@ select plaintext from wordform  where plaintext ilike ('A%'); task 1
 
 select plaintext  from wordform limit 10 taks 2
 
+select charname, speechcount from character where speechcount between 15 and 30;      task 9 
+
+
+
+Андабеков Исабар, [12 мая 2022 г., 23:45:43 (12 мая 2022 г., 20:59:13)]:
+# 1 
+- select plaintext from wordform LIMIT 10; 
+
+# 2 
+- SELECT plaintext FROM wordform WHERE plaintext ILIKE ('a%');
+
+# 3
+- SELECT title, genretype FROM work WHERE genretype = 'p';
+
+# 4
+- SELECT AVG(totalparagraphs) FROM work WHERE genretype='t';
+
+# 5
+- 
+c.charname, c.speechcount, cw.workid AS title FROM character AS c INNER JOIN character_work AS cw ON c.charid = cw.charid;
+
+
+
+# 10 
+- SELECT title, year FROM work WHERE year BETWEEN 1601 AND 1700;
+
+# 11
+- SELECT longtitle FROM work WHERE longtitle LIKE '%the%';
+
+# 12 
+- SELECT DISTINCT section FROM paragraph;
+
+Вот таски которые я делал
